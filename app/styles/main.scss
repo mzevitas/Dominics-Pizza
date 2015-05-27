@@ -1,15 +1,13 @@
+@import "../../bower_components/foundation/scss/foundation/components/grid";
 body {
     background-color: #141414;
     font-size: 62.5%;
     width: 100%;
-
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
-   
-
 }
 
 header {
@@ -58,17 +56,12 @@ header {
 }
 
 // About styles 
-
 .about {
     color: white;
-
     background-image: url(/images/oven2.png);
     background-size: cover;
-    background-color: hsla(180,36%,96%,0.1);
+    background-color: hsla(180, 36%, 96%, 0.1);
     background-repeat: no-repeat;
-    
-
-
     h2 {
         font-size: 4.5em;
         font-weight: bold;
@@ -76,24 +69,45 @@ header {
         margin-bottom: 5px;
         padding-top: 10px;
         text-align: center;
+        color: white;
         text-shadow: -6px 2px 0px rgba(136, 17, 25, 1);
         letter-spacing: 1px;
-
-        
-
     }
-
     p {
         font-size: 1.7em;
         width: 80%;
         margin: 0 auto;
         padding: 20px;
-        background-color: hsla(0,0%,8%,0.8);
+        background-color: hsla(0, 0%, 8%, 0.8);
         font-weight: 500;
         text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
         margin-bottom: 20px;
-        box-shadow: 1px 1px 1px 1px hsla(356,78%,30%,0.6);
+        box-shadow: 1px 1px 1px 1px hsla(356, 78%, 30%, 0.6);
+        border-radius: 10px;
+    }
+}
 
+//menu Styles: 
+.menu {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    h1 {
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+    }
+    h2 {
+        padding-top: 50px;
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+    }
+    h3 {
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+    }
+
+    .deserts {
+        margin-bottom: 15px;
     }
 }
 
@@ -112,8 +126,7 @@ footer {
     a {
         color: white;
         &:hover {
-        	color: rgba(136, 17, 25, 1);
+            color: rgba(136, 17, 25, 1);
         }
     }
 }
-
