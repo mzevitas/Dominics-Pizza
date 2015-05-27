@@ -2,6 +2,14 @@ body {
     background-color: #141414;
     font-size: 62.5%;
     width: 100%;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+   
+
 }
 
 header {
@@ -46,6 +54,46 @@ header {
         margin-top: 30px;
         padding: 10px;
         border: 2px solid hsla(36, 62%, 80%, 1);
+    }
+}
+
+// About styles 
+
+.about {
+    color: white;
+
+    background-image: url(/images/oven2.png);
+    background-size: cover;
+    background-color: hsla(180,36%,96%,0.1);
+    background-repeat: no-repeat;
+    
+
+
+    h2 {
+        font-size: 4.5em;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        text-align: center;
+        text-shadow: -6px 2px 0px rgba(136, 17, 25, 1);
+        letter-spacing: 1px;
+
+        
+
+    }
+
+    p {
+        font-size: 1.7em;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: hsla(0,0%,8%,0.8);
+        font-weight: 500;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 1px 1px hsla(356,78%,30%,0.6);
+
     }
 }
 
