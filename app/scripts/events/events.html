@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="events" ng-controller="EventsCtrl">
+        <ul ng-repeat="e in event">
+            <li>	
+                {{ e.date }} <br>
+                 {{ e.time }} <br>
+                 {{ e.location}} <br>
+            </li>
+        </ul>
+    </div>
+    <div class="addevent">
+        <h1>Add New Event</h1>
+        <form class="addform" ng-submit="addEvents(e)" ng-controller="EventsCtrl">
+            <input type="text" ng-model="e.date" placeholder="Enter Date" />
+            <input type="text" ng-model="e.time" placeholder="Enter Time" />
+            <input type="text" ng-model="e." placeholder="Enter Locations Name" />
+            <input type="text" ng-model="e.location" placeholder="Enter Location address" />
+            <br>
+            <button>Add Event</button>
+        </form>
+    </div>
+</div>

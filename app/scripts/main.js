@@ -3,8 +3,8 @@
    var app = angular.module('DOMPIZZA', ['ngRoute', 'ngCookies'])
         .constant('PARSE_HEADERS', {
             headers: {
-                'X-Parse-Application-Id': '',
-                'X-Parse-REST-API-Key': '',
+                'X-Parse-Application-Id': '6IeYZZXsnHTu4d32gx3EgFRCrUCIO4NQ6zjcfqQH',
+                'X-Parse-REST-API-Key': 'gfFP7THIViyzghcBLWplBPjmn31ES7cZGWhM5UuV',
                 'Content-Type': 'application/json'
             }
         })
@@ -24,7 +24,7 @@
                 controller: 'PageCtrl'
             });
             $routeProvider.when('/events', {
-                templateUrl: 'views/blog.html',
+                templateUrl: 'scripts/events/events.html',
                 controller: 'EventsCtrl'
             });
             $routeProvider.when('/gallery', {
