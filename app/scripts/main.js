@@ -8,6 +8,7 @@
                 'Content-Type': 'application/json'
             }
         })
+       .constant('PARSE_URI', 'https://api.parse.com/1/')
        .config( function ($routeProvider) {
 
 
@@ -36,6 +37,14 @@
             $routeProvider.when('/contact', {
                 templateUrl: 'views/contact.html',
                 controller: 'PageCtrl'
+            });
+            $routeProvider.when('/login', {
+                templateUrl: 'scripts/users/login.html',
+                controller: 'UserCtrl'
+            });
+            $routeProvider.when('/addevents', {
+                templateUrl: 'scripts/events/addevents.html',
+                controller: 'EventsCtrl'
             });
            
 

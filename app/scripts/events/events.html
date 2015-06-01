@@ -4,19 +4,17 @@
             <li>	
                 {{ e.date }} <br>
                  {{ e.time }} <br>
-                 {{ e.location}} <br>
+                 {{ e.locname}} <br>
+                 {{ e.location}}<br>
+                 <button ng-click="deleteMe(e.objectId, $index)">X</button>
             </li>
         </ul>
     </div>
-    <div class="addevent">
-        <h1>Add New Event</h1>
-        <form class="addform" ng-submit="addEvents(e)" ng-controller="EventsCtrl">
-            <input type="text" ng-model="e.date" placeholder="Enter Date" />
-            <input type="text" ng-model="e.time" placeholder="Enter Time" />
-            <input type="text" ng-model="e." placeholder="Enter Locations Name" />
-            <input type="text" ng-model="e.location" placeholder="Enter Location address" />
-            <br>
-            <button>Add Event</button>
-        </form>
-    </div>
+    <script>
+
+
+    </script>
 </div>
+
+
+

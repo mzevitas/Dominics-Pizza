@@ -14,6 +14,15 @@
 
       };
 
+      $scope.deleteMe = function (id, index) {
+        EventsFactory.deleteEvent(id).success( function (response) {
+           $scope.events.splice(index, 1);
+        });
+      };
+
+
+
+
      
     
 
