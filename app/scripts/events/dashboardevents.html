@@ -1,16 +1,19 @@
 <div class="container">
-    <div class="events" ng-controller="EventsCtrl">
+
+
+<a href="#/addevents"><button>Add Event</button></a>
+	
+	  <div class="events" ng-controller="EventsCtrl">
         <ul ng-repeat="e in events">
-            <li>	
+            <li>    
                 {{ e.date }} <br>
                  {{ e.time }} <br>
                  {{ e.locname}} <br>
                  {{ e.location}}<br>
+                 <button ng-click="deleteMe(e.objectId, $index)">X</button>
             </li>
         </ul>
     </div>
 
+
 </div>
-
-
-

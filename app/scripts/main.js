@@ -33,7 +33,6 @@
                 controller: 'PageCtrl'
             });
 
-           
             $routeProvider.when('/contact', {
                 templateUrl: 'views/contact.html',
                 controller: 'PageCtrl'
@@ -44,6 +43,10 @@
             });
             $routeProvider.when('/addevents', {
                 templateUrl: 'scripts/events/addevents.html',
+                controller: 'EventsCtrl'
+            });
+            $routeProvider.when('/dashboardevents', {
+                templateUrl: 'scripts/events/dashboardevents.html',
                 controller: 'EventsCtrl'
             });
            

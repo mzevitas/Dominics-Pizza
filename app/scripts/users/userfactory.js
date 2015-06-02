@@ -22,7 +22,7 @@
           var user = $cookieStore.get('currentUser');
           if(user) {
             $('#user').html('Welcome back ' + user.name);
-            $location.path('/addevents');
+            $location.path('/dashboardevents');
           } else {
             $('#user').html('Please Log In');
             $location.path('/login');

@@ -1,8 +1,8 @@
 (function (){
 
   angular.module('DOMPIZZA')
-    .controller('EventsCtrl', ['$scope',  'EventsFactory','$routeParams', '$cacheFactory',
-    function ($scope, EventsFactory,  $routeParams, $cacheFactory){
+    .controller('EventsCtrl', ['$scope', '$location', 'EventsFactory','$routeParams', '$cacheFactory',
+    function ($scope, $location, EventsFactory, $routeParams, $cacheFactory){
 
        var cache = $cacheFactory.get('$http');
 
@@ -16,8 +16,10 @@
         $scope.events = {};
         EventsFactory.add(eventObj).success( function (results) {
           eventObj.objectId = results.objectId;
-          $scope.events.push(eventObj);
+          // $scope.events.push(eventObj);
           cache.remove('https://api.parse.com/1/classes/events');
+          
+
         });
       };
 

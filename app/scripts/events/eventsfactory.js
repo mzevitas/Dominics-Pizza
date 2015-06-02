@@ -9,14 +9,18 @@
 
                 var getEvents = function() {
                     return $http.get(PARSE_URI + 'classes/events', PARSE_HEADERS);
-                      
-                    };
-                    
-              
+
+                };
+
+
 
                 var addEvents = function(eventObj) {
-                    
-                    return $http.post(PARSE_URI + 'classes/events', eventObj, PARSE_HEADERS);
+
+                    return $http.post(PARSE_URI + 'classes/events', eventObj, PARSE_HEADERS)
+                        .success(function() {
+                            $location.path('/dashboardevents');
+
+                        });
                 };
 
                 var deleteEvents = function(id) {
