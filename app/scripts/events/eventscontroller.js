@@ -1,26 +1,32 @@
 (function (){
 
   angular.module('DOMPIZZA')
-    .controller('EventsCtrl', ['$scope', 'EventsFactory','$routeParams',
-    function ($scope, EventsFactory, $routeParams){
+    .controller('EventsCtrl', ['$scope',  'EventsFactory','$routeParams', '$cacheFactory',
+    function ($scope, EventsFactory,  $routeParams, $cacheFactory){
 
-      EventsFactory.getEvents().success( function(data){
-      $scope.event = data.results;
+       var cache = $cacheFactory.get('$http');
 
-    });
+      $scope.events = [];
 
-      $scope.addEvents = function (events) {
-        EventsFactory.addEvents(events);
-
-      };
-
-      $scope.deleteMe = function (id, index) {
-        EventsFactory.deleteEvent(id).success( function (response) {
-           $scope.events.splice(index, 1);
+      EventsFactory.get().success( function (response) {
+        $scope.events = response.results;
+      });
+    
+      $scope.addEvents = function (eventObj) {
+        $scope.events = {};
+        EventsFactory.add(eventObj).success( function (results) {
+          eventObj.objectId = results.objectId;
+          $scope.events.push(eventObj);
+          cache.remove('https://api.parse.com/1/classes/events');
         });
       };
 
-
+      $scope.deleteMe = function (id, index) {
+        EventsFactory.del(id).success( function (response) {
+          $scope.events.splice(index, 1);
+          cache.remove('https://api.parse.com/1/classes/events');
+        });
+      };
 
 
      
