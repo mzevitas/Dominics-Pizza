@@ -1,0 +1,127 @@
+<div class="container">
+    <section class="slider">
+    <button class="next">Next</button>
+        <button class="prev">Previous</button>
+        <div class="containergal">
+
+            <div style="display: inline-block;">
+                <img src="images/dom1.jpg" />
+            </div>
+            <div>
+                <img src="images/dom2.jpg" />
+            </div>
+            <div>
+                <img src="images/dom3.jpg" />
+            </div>
+            <div>
+                <img src="images/dom4.jpg" />
+            </div>
+            <div>
+                <img src="images/dom5.jpg" />
+            </div>
+            <div>
+                <img src="images/dom6.jpg" />
+            </div>
+            <div>
+                <img src="images/dom7.jpg" />
+            </div>
+            <div>
+                <img src="images/dom8.jpg" />
+            </div>
+            <div>
+                <img src="images/dom9.jpg" />
+            </div>
+            <div>
+                <img src="images/dom10.jpg" />
+            </div>  
+            <div>
+                <img src="images/dom11.jpg" />
+            </div>
+            <div>
+                <img src="images/dom12.jpg" />
+            </div>
+            <div>
+                <img src="images/dom13.jpg" />
+            </div>
+            <div>
+                <img src="images/dom14.jpg" />
+            </div>
+            <div>
+                <img src="images/dom15.jpg" />
+            </div>
+            <div>
+                <img src="images/dom16.jpg" />
+            </div>
+            
+            <div>
+                <img src="images/dom18.jpg" />
+            </div>
+            <div>
+                <img src="images/dom19.jpg" />
+            </div>
+            <div>
+                <img src="images/dom20.jpg" />
+            </div>
+            <div>
+                <img src="images/dom21.jpg" />
+            </div>
+            <div>
+                <img src="images/dom22.jpg" />
+            </div>
+            
+            <div>
+                <img src="images/dom24.jpg" />
+            </div>
+            <div>
+                <img src="images/dompresentation.jpg" />
+            </div>
+            <div>
+                <img src="images/domtruck.jpg" />
+            </div>
+            
+
+            
+        
+            </div>
+    </section>
+</div>
+
+
+<script>
+  var currentIndex = 0,
+  items = $('.containergal div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.containergal div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+var autoSlide = setInterval(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+}, 3000);
+
+$('.next').click(function() {
+  clearInterval(autoSlide);
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('.prev').click(function() {
+  clearInterval(autoSlide);
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
+
+</script>

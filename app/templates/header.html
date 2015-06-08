@@ -11,4 +11,29 @@
         <a href="#/gallery">Gallery</a>
         <a href="#/contact">Contact</a>
     </div>
+
+     <nav>
+        <span class="nav-btn"><img class="btn-img" src="images/whitemenu.png"/></span>
+        <ul class="nav">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/portfolio">Portfolio</a></li>
+            <li><a href="#/blog">Blog</a></li>
+            <li><a href="#/contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <script>
+        $('.nav-btn').click(function (){
+            $('.nav').slideToggle();
+        });
+        $('.nav').removeAttr('style');
+        $(".nav li").on("click",function(){
+            $('.nav').slideUp();
+        });
+    </script>
 </header><!-- /header -->
