@@ -1,6 +1,6 @@
 @import "../../bower_components/foundation/scss/foundation/components/grid";
 body {
-    background-color: #141414;
+    background-color: black;
     font-size: 62.5%;
     width: 100%;
 }
@@ -69,7 +69,7 @@ nav {
 .about {
     color: white;
     background-image: url(/images/oven2.png);
-    background-size: contain;
+    background-size: cover;
     background-color: hsla(180, 36%, 96%, 0.1);
     background-repeat: no-repeat;
     h2 {
@@ -214,10 +214,17 @@ nav {
         text-align: center;
         padding: 18px;
         margin-top: 10px;
-        margin-left: 30px;
+        margin-left: -17px;
         // margin-bottom: 10px;
         border: 1px solid rgba(136, 17, 25, 1);
         box-shadow: 1px 1px 1px 1px hsla(280, 3%, 36%, 0.5);
+    }
+    h2 {
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 }
 
@@ -240,13 +247,10 @@ section {
     margin-top: 25px;
     .containergal {
         max-width: 400px;
-        background-color: black;
         margin: 0 auto;
         text-align: center;
         position: relative;
         margin-bottom: 100px;
-        border: 1px solid #ecd2ac;
-        padding: 10px;
     }
     .containergal div {
         background-color: white;
@@ -257,17 +261,25 @@ section {
     .containergal img {
         width: 100%;
         height: auto;
-    }
-    button {
-        position: absolute;
+        border: 1px solid #ecd2ac;
+        padding: 10px;
+        background-color: #141414;
     }
     .next {
-        right: 316px;
+        width: 5%;
+        margin: 0 auto;
+        display: block;
+        float: right;
         margin-top: 100px;
+        padding-bottom: 10px;
     }
     .prev {
-        left: 283px;
+        width: 5%;
+        margin: 0 auto;
+        display: block;
+        float: left;
         margin-top: 100px;
+        padding-bottom: 10px;
     }
 }
 
@@ -325,6 +337,36 @@ section {
     margin-top: 5px;
 }
 
+// Contact Styles:
+.contact {
+    text-align: center;
+    h2 {
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+    }
+    h3 {
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+    }
+    p{
+        color: white;
+        text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+        width: 70%;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    a {
+        color: white;
+        text-shadow: none;
+        &:hover {
+            color: rgba(136, 17, 25, 1);
+        }
+    }
+}
+
 //footer Style
 footer {
     height: 100px;
@@ -353,38 +395,77 @@ footer {
     }
     header {
         .logoleft {
-            width: 80%;
+            width: 90%;
             img {
-                width: 25%;
+                width: 125px;
             }
         }
     }
-        nav {
-            display: block;
-            // float: right;  
-        }
-        .nav {
-            display: none;
-            float: right;
-            font-size: 30px;
-            // background-color: $header-color;
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-            a {
+    nav {
+        display: block;
+        // float: right;  
+    }
+    .nav {
+        display: none;
+        float: right;
+        font-size: 30px;
+        // background-color: $header-color;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-shadow: -2px 2px 0px rgba(136, 17, 25, 1);
+            letter-spacing: 1px;
+            &:hover {
+                text-decoration: underline;
                 color: white;
-                text-align: center;
+                text-shadow: -1px 2px 0px rgba(136, 17, 25, 1);
+                text-transform: 10px ease;
             }
         }
-        .nav-btn {
-            display: block;
-            cursor: pointer;
-        }
-        .btn-img {
-            margin-right: 15px;
-            margin-top: 50px;
-            width: 30px;
-            height: 25px;
-        }
-        .nav-btn:before {}
     }
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+    }
+    .btn-img {
+        margin-right: 15px;
+        margin-top: 50px;
+        width: 30px;
+        height: 23px;
+    }
+    .nav-btn:before {}
+    .home {
+        iframe {
+            width: 500px;
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 555px) {
+    section {
+        .next, .prev {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    header {
+        .logoleft {
+            width: 80%;
+        }
+    }
+    .home {
+        iframe {
+            width: 315px;
+            height: 160px;
+        }
+    }
+}
