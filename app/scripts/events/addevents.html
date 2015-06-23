@@ -1,11 +1,14 @@
 <div class="addevent">
         <h1>Add New Event</h1>
         <form class="addform" ng-submit="addEvents(e)" ng-controller="EventsCtrl">
+
             <input type="text" ng-model="e.date" placeholder="Enter Date" />
             <input type="text" ng-model="e.time" placeholder="Enter Time" />
             <input type="text" ng-model="e.locname" placeholder="Enter Locations Name" />
             <input type="text" ng-model="e.location" placeholder="Enter Location address" />
+            <input type="text" ng-model="e.order" placeholder="Enter Date mmddyyy (no spaces, add 0 on single numbers exp: 06052015)" />
             <br>
+
             <button>Add Event</button>
         </form>
 

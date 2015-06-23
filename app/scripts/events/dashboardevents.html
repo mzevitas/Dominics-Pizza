@@ -5,13 +5,14 @@
         </a>
         <br>
         <div class="events" ng-controller="EventsCtrl">
-            <ul ng-repeat="e in events">
+            <ul ng-repeat="e in events | orderBy: 'order'">
                 <li>
                     <br> {{ e.locname}}
-                       <br>  {{ e.date }}
+                    <br>  {{ e.date }}
                     <br> {{ e.time }}
                     <br> {{ e.location}}
                     <br>
+
                     <button class="del-btn" ng-click="deleteMe(e.objectId, $index)">X</button>
                 </li>
             </ul>

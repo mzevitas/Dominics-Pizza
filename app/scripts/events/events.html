@@ -1,7 +1,7 @@
 <div class="container">
     <div class="events" ng-controller="EventsCtrl">
     <h2>Upcoming Events</h2>
-        <ul ng-repeat="e in events">
+        <ul ng-repeat="e in events | orderBy: 'order'">
             <li>	
                  {{ e.locname}} <br>
                  {{ e.date }} <br>
