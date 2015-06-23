@@ -148,16 +148,24 @@ nav {
     }
 }
 
+
+
+
+
+
+
+
+
 // flips on the menu
 .flip-container {
     perspective: 1000;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+   
 }
-/* flip the pane when hovered */
 
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-    transform: rotateY(180deg);
-}
+
 
 .flip-container,
 .front,
@@ -169,15 +177,35 @@ nav {
 /* flip speed goes here */
 
 .flipper {
-    transition: 0.9s;
-    transform-style: preserve-3d;
+      -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+
     position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+
 }
 /* hide back of pane during swap */
 
 .front,
 .back {
-    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -194,6 +222,10 @@ nav {
 
 .back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
     // width: 270px;
     color: white;
     padding: 20px;
@@ -201,7 +233,34 @@ nav {
     // background-color: rgba(136, 17, 25, 1); 
     border-radius: 10px;
     border: solid 1px rgba(136, 17, 25, 1);
+
 }
+
+
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
 
 //events Style 
 .events {
