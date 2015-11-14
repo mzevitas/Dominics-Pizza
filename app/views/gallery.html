@@ -1,80 +1,33 @@
 <div class="container">
-    <section class="slider">
+    <section class="slider" >
    <!--  <button class="next"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-arrows/006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" alt=""></button>
         <button class="prev">Previous</button>
 
  -->
 
- <img class="next" src="images/arrownext.png" >
-  <img class="prev" src="images/arrowprev.png" >
+
+  <div class="imglinkd">
+      <ul rn-carousel rn-carousel-controls rn-carousel-index="carouselIndex" rn-carousel-buffered rn-carousel-auto-slide rn-carousel-controls-allow-loop rn-carousel-transition="fadeAndSlide" style="margin: 50px auto; text-align: center; height: 500px;" class="image" ng-controller="PhotoCtrl" height="auto" width="70%">
+          <li ng-repeat="po in photos | orderBy:'-createdAt'">
+              <img style="padding: 10px;
+        border: 2px solid hsla(36, 62%, 80%, 1);" class="layer" ng-src="{{ po.imglink }}">
+          </li>
+      </ul>
+  </div>
+  </section>
+  </div>
+<!-- 
+ <img class="next" src="images/arrownext.png" style="z-index: 1;">
+  <img class="prev" src="images/arrowprev.png" style="z-index: 1;">
 
  
         <div class="containergal">
-
-            <div style="display: inline-block;">
-                <img src="images/dom1.jpg" />
-            </div>
-            <div>
-                <img src="images/dom2.jpg" />
-            </div>
-            <div>
-                <img src="images/dom3.jpg" />
-            </div>
-            <div>
-                <img src="images/dom4.jpg" />
-            </div>
-            <div>
-                <img src="images/dom5.jpg" />
-            </div>
-            <div>
-                <img src="images/dom6.jpg" />
-            </div>
-            <div>
-                <img src="images/dom7.jpg" />
-            </div>
-            <div>
-                <img src="images/dom8.jpg" />
-            </div>
-            <div>
-                <img src="images/dom9.jpg" />
-            </div>
-            <div>
-                <img src="images/dom10.jpg" />
-            </div>  
-            
-            <div>
-                <img src="images/dom12.jpg" />
-            </div>
-            
           
-            <div>
-                <img src="images/dom15.jpg" />
+            <div ng-repeat="po in photos | orderBy: createdAt" style="display: none;">
+                <img ng-src="{{po.imglink}}"/>
+                
             </div>
-            
-            
-            <div>
-                <img src="images/dom18.jpg" />
-            </div>
-            <div>
-                <img src="images/dom19.jpg" />
-            </div>
-            <div>
-                <img src="images/dom20.jpg" />
-            </div>
-            <div>
-                <img src="images/dom21.jpg" />
-            </div>
-            <div>
-                <img src="images/dom22.jpg" />
-            </div>
-        
-            <div>
-                <img src="images/dompresentation.jpg" />
-            </div>
-            <div>
-                <img src="images/domtruck.jpg" />
-            </div>
-            
+
 
             
         
@@ -109,6 +62,7 @@ $('.next').click(function() {
     currentIndex = 0;
   }
   cycleItems();
+
 });
 
 $('.prev').click(function() {
@@ -120,4 +74,4 @@ $('.prev').click(function() {
   cycleItems();
 });
 
-</script>
+</script> -->

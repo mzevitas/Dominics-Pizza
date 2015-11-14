@@ -1,6 +1,6 @@
 (function () {
 
-   var app = angular.module('DOMPIZZA', ['ngRoute', 'ngCookies'])
+   var app = angular.module('DOMPIZZA', ['ngRoute', 'ngCookies','angular-carousel'])
         .constant('PARSE_HEADERS', {
             headers: {
                 'X-Parse-Application-Id': '6IeYZZXsnHTu4d32gx3EgFRCrUCIO4NQ6zjcfqQH',
@@ -30,7 +30,7 @@
             });
             $routeProvider.when('/gallery', {
                 templateUrl: 'views/gallery.html',
-                controller: 'PageCtrl'
+                controller: 'PhotoCtrl'
             });
 
             $routeProvider.when('/contact', {
@@ -48,6 +48,10 @@
             $routeProvider.when('/dashboardevents', {
                 templateUrl: 'scripts/events/dashboardevents.html',
                 controller: 'EventsCtrl'
+            });
+            $routeProvider.when('/addphotos', {
+                templateUrl: 'scripts/photo/addPhoto.html',
+                controller: 'PhotoCtrl'
             });
            
 
