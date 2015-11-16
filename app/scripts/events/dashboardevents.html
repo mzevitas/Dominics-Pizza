@@ -20,5 +20,18 @@
                 </li>
             </ul>
         </div>
+
+        <div class="events" ng-controller="PhotoCtrl">
+            <ul ng-repeat="p in photos | orderBy: 'order'">
+                <li>
+                    <br> 
+                    <img src="{{ p.imglink}}" alt="">
+                  
+             
+
+                    <button class="del-btn" ng-click="deleteMe(p.objectId, $index)">X</button>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

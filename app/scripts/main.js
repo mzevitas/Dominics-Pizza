@@ -46,8 +46,8 @@
                 controller: 'EventsCtrl'
             });
             $routeProvider.when('/dashboardevents', {
-                templateUrl: 'scripts/events/dashboardevents.html',
-                controller: 'EventsCtrl'
+                templateUrl: 'scripts/events/dashboardevents.html'
+
             });
             $routeProvider.when('/addphotos', {
                 templateUrl: 'scripts/photo/addPhoto.html',
