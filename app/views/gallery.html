@@ -7,7 +7,7 @@
 
 
   <div class="imglinkd">
-      <ul rn-carousel rn-carousel-controls rn-carousel-index="carouselIndex" rn-carousel-buffered rn-carousel-auto-slide rn-carousel-controls-allow-loop rn-carousel-transition="fadeAndSlide" style="margin: 50px auto; text-align: center; height: 500px;" class="image" ng-controller="PhotoCtrl" height="auto" width="70%">
+      <ul rn-carousel rn-carousel-controls rn-carousel-index="carouselIndex" rn-carousel-buffered rn-carousel-auto-slide rn-carousel-controls-allow-loop rn-carousel-transition="fadeAndSlide" style="margin: 50px auto; text-align: center; min-height: 500px;" class="image" ng-controller="PhotoCtrl" height="auto" width="70%">
           <li ng-repeat="po in photos | orderBy:'-createdAt'">
               <img style="padding: 10px;
         border: 2px solid hsla(36, 62%, 80%, 1);" class="layer" ng-src="{{ po.imglink }}">
